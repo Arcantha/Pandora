@@ -252,11 +252,41 @@ public class ModelRealPlayer extends AdvancedModelBase {
         f = entity.ticksExisted;
         f1 = 0.5f;
 
-        float globalSpeed = 1;
-        float globalHeight = 1;
-        float globalDegree = 4;
+        float globalSpeed = 1.5f;
+        float globalHeight = -10f;
+        float globalDegree = 1.5f;
 
-        walk(LeftLegJoint, 1.2f * globalSpeed, 0.5f * globalDegree, false, 0, 0.5f, f, f1);
-        LeftLegKnee.walk(1.2f * globalSpeed, 1.5f * globalDegree, false, 0, 0.5f, f, f1);
+
+        if (entity.motionX > 0.01 || entity.motionZ > 0.01 || entity.motionZ < -0.01 || entity.motionX < -0.01){
+            Chest.rotateAngleX = .30f;
+            Chest.defaultPositionY = -2.5f;
+            Chest.defaultPositionZ = -3f;
+            bob(Head, 0.5f *globalSpeed, 0.1f * globalDegree, false, f, f1);
+            bob(Body, 0.5f * globalSpeed, 0.5f * globalDegree, false, f, f1);
+            walk(LeftLegJoint, 0.5f * globalSpeed, 0.5f * globalDegree, true, 0, 0f, f, f1);
+            walk(LeftLegKnee, 0.5f * globalSpeed, 0.5f * globalDegree, false, 0, 0.5f, f, f1);
+            walk(RightLegJoint, 0.5f * globalSpeed, 0.5f * globalDegree, false, 0, 0f, f, f1);
+            walk(RightLegKnee, 0.5f * globalSpeed, 0.5f * globalDegree, false, 0, 0.5f, f, f1);
+            walk(RightLegThigh, 0.5f * globalSpeed, 0.5f * globalDegree, false, 0, 0.0f, f, f1);
+            walk(LeftLegThigh, 0.5f * globalSpeed, 0.5f * globalDegree, true, 0, 0.0f, f, f1);
+            walk(Chest, 0.5f * globalSpeed, 0.03f * globalDegree, false, 0, 0, f, f1);
+            walk(LeftArmJoint, 0.5f * globalSpeed, 0.3f * globalDegree, true, 0, 0, f, f1);
+            walk(RightArmJoint, 0.5f * globalSpeed, 0.3f * globalDegree, false, 0 , 0, f, f1);
+            walk(RightArmJoint2, 0.5f * globalSpeed, 1f * globalDegree, false, 0, 0, f, f1);
+            walk(LeftArmJoint2, 0.5f * globalSpeed, 1f * globalDegree, true, 0, 0, f, f1);
+            if (entity.motionY > 0.01){
+                Chest.rotateAngleX = .45f;
+                Chest.defaultPositionY = 2.5f;
+                Chest.defaultPositionZ = -3f;
+                LeftLegJoint.rotateAngleX = -0.45f;
+                RightLegJoint.rotateAngleX = -0.45f;
+                RightLegKnee.rotateAngleX = 0.45f;
+                LeftLegKnee.rotateAngleX = 0.45f;
+            }
+        }
+    }
+    public void setVisible(boolean visible)
+    {
+        this.Body.showModel = visible;
     }
 }

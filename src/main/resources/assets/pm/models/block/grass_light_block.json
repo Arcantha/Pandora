@@ -1,0 +1,24 @@
+{
+	"__comment": "Designed by Arcantha with Cubik Studio - https://cubik.studio",
+	"textures": {
+		"particle": "am:blocks/e_particle",
+		"grass_side_light": "am:blocks/grass_side_light",
+		"grass_top_light": "am:blocks/grass_top_light",
+		"grass_bottom": "am:blocks/grass_bottom"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Box1",
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 16, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 16 ], "texture": "#grass_bottom" },
+				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "#grass_top_light" },
+				"north": { "uv": [ 0, 0, 16, 16 ], "texture": "#grass_side_light" },
+				"south": { "uv": [ 0, 0, 16, 16 ], "texture": "#grass_side_light" },
+				"west": { "uv": [ 0, 0, 16, 16 ], "texture": "#grass_side_light" },
+				"east": { "uv": [ 0, 0, 16, 16 ], "texture": "#grass_side_light" }
+			}
+		}
+	]
+}

@@ -21,8 +21,9 @@ public class RenderHandler {
             event.setCanceled(true);
         }
         EntityPlayer player = event.getEntityPlayer();
-        RenderRealPlayer renderRealPlayer = new RenderRealPlayer(Minecraft.getMinecraft().getRenderManager());
-        renderRealPlayer.doRender(new EntityRealPlayer(Minecraft.getMinecraft().world), 0,0,0,0.5f,event.getPartialRenderTick());
+        EntityPlayerSP playerSP = (EntityPlayerSP)player;
+        RenderRealPlayer renderRealPlayer = new RenderRealPlayer(Minecraft.getMinecraft().getRenderManager(), 3.0f);
+        renderRealPlayer.doRender(playerSP, 0, 0, 0, 0f, event.getPartialRenderTick());
     }
 
     @SubscribeEvent

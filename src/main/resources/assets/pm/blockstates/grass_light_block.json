@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "am:grass_light_block" }
+    }
+}

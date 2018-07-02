@@ -348,7 +348,9 @@ public class ModelDirehorse extends AdvancedModelBase {
         f = entity.ticksExisted;
         f1 = 0.5f;
 
-        bob(Head, 1, 1, false, f, f1);
+        bob(Head, 0.5f, 0.5f, false, f, f1);
+        walk(Shoulder1, 0.5f, 0.5f, true, 0, 0, f, f1);
+        bob(Chest, 0.5f, 0.5f, false, f, f1);
     }
 
     /**

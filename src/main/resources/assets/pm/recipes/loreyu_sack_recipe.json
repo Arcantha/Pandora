@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " L ",
+        "L L",
+        " L "
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "am:loreyu_leaf"
+        }
+    },
+    
+    "result":
+    {
+        "item": "am:loreyu_sack",
+        "count": 1
+    }
+}
