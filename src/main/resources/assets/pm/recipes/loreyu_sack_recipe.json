@@ -12,13 +12,13 @@
     {
         "L":
         {
-            "item": "am:loreyu_leaf"
+            "item": "pm:loreyu_leaf"
         }
     },
     
     "result":
     {
-        "item": "am:loreyu_sack",
+        "item": "pm:loreyu_sack",
         "count": 1
     }
 }

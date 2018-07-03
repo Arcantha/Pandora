@@ -1,18 +1,29 @@
 package dev.arcantha.pandora.common.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockDoublePlant;
-import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
-public class LoreyuPlantBlock extends BlockDoublePlant {
+import net.minecraft.block.material.Material;
+
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class LoreyuPlantBlock extends BlockBase {
+
 
     public LoreyuPlantBlock(String name, Material material) {
-        setCreativeTab(CreativeTabs.DECORATIONS);
-        setUnlocalizedName(name);
-        setRegistryName(name);
+        super(name, material);
         setLightLevel(7f);
+    }
 
-        ModBlocks.BLOCKS.add(this);
+    @SideOnly(Side.CLIENT)
+    public BlockRenderLayer getBlockLayer() {
+        return BlockRenderLayer.TRANSLUCENT;
+    }
+
+    @Override
+    public boolean isOpaqueCube(IBlockState state) {
+        return false;
     }
 }
+

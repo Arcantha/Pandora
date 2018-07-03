@@ -1,12 +1,11 @@
 {
 	"__comment": "Designed by Arcantha with Cubik Studio - https://cubik.studio",
 	"textures": {
-		"particle": "am:blocks/particle",
-		"stem1": "am:blocks/stem1",
-		"leaf1": "am:blocks/leaf1",
-		"stem2": "am:blocks/stem2",
-		"leaf2": "am:blocks/leaf2",
-		"grass_top": "grass_top"
+		"particle": "pm:blocks/particle",
+		"stem1": "pm:blocks/stem1",
+		"leaf1": "pm:blocks/leaf1",
+		"stem2": "pm:blocks/stem2",
+		"leaf2": "pm:blocks/leaf2"
 	},
 	"elements": [ 	 
 		{

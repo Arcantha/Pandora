@@ -1,10 +1,10 @@
 {
 	"__comment": "Designed by Arcantha with Cubik Studio - https://cubik.studio",
 	"textures": {
-		"particle": "am:blocks/e_particle",
-		"grass_side_light": "am:blocks/grass_side_light",
-		"grass_top_light": "am:blocks/grass_top_light",
-		"grass_bottom": "am:blocks/grass_bottom"
+		"particle": "pm:blocks/e_particle",
+		"grass_side_light": "pm:blocks/grass_side_light",
+		"grass_top_light": "pm:blocks/grass_top_light",
+		"grass_bottom": "pm:blocks/grass_bottom"
 	},
 	"elements": [ 	 
 		{

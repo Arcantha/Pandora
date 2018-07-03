@@ -1,5 +1,7 @@
 {
     "variants": {
-        "normal": { "model": "am:loreyu_plant_block" }
+        "normal": { "model": "pm:loreyu_plant_block" },
+        "inventory": {"model": "pm:loreyu_plant_block",
+        "transform": "forge:default-block"}
     }
 }

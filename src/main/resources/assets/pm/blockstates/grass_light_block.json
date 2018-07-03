@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "am:grass_light_block" }
+        "normal": { "model": "pm:grass_light_block" }
     }
 }
