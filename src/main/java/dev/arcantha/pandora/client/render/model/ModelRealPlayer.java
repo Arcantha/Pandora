@@ -284,6 +284,8 @@ public class ModelRealPlayer extends AdvancedModelBase {
                 LeftLegKnee.rotateAngleX = 0.45f;
             }
         }
+        if (entity.isRiding()){
+            Body.defaultPositionY = -23.0f;        }
     }
     public void setVisible(boolean visible)
     {

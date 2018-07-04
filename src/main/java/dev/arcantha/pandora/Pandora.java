@@ -21,6 +21,7 @@ public class Pandora {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         RegistryHandler.preInitRegistries();
+
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {

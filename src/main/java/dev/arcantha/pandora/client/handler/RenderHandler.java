@@ -25,6 +25,8 @@ public class RenderHandler {
         RenderRealPlayer renderRealPlayer = new RenderRealPlayer(Minecraft.getMinecraft().getRenderManager(), 3.0f);
         renderRealPlayer.doRender(playerSP, 0, 0, 0, 0f, event.getPartialRenderTick());
     }
+    @SubscribeEvent
+    public void onCameraRender()
 
     @SubscribeEvent
     public void onJump(LivingEvent.LivingJumpEvent event) {

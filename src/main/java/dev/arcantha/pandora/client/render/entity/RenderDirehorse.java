@@ -12,7 +12,7 @@ public class RenderDirehorse extends RenderLiving<EntityDirehorse> {
     public static final ResourceLocation TEXTURES = new ResourceLocation("pm:direhorse.png");
 
     public RenderDirehorse(RenderManager manager) {
-        super(manager, new ModelDirehorse(), 4.0F);
+        super(manager, new ModelDirehorse(), 3.0F);
     }
 
     @Override

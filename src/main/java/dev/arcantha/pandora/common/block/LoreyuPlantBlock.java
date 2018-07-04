@@ -9,8 +9,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class LoreyuPlantBlock extends BlockBase {
-
-
     public LoreyuPlantBlock(String name, Material material) {
         super(name, material);
         setLightLevel(7f);
@@ -19,6 +17,11 @@ public class LoreyuPlantBlock extends BlockBase {
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer() {
         return BlockRenderLayer.TRANSLUCENT;
+    }
+
+    @Override
+    public boolean isFullCube(IBlockState state) {
+        return false;
     }
 
     @Override
