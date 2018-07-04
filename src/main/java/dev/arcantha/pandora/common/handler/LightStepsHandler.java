@@ -1,5 +1,6 @@
 package dev.arcantha.pandora.common.handler;
 
+import dev.arcantha.pandora.common.block.ModBlocks;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -70,157 +71,161 @@ public class LightStepsHandler {
             BlockPos blockUUSWPos = player.getPosition().south().west().down().down();
             BlockPos blockUUNWPos = player.getPosition().north().west().down().down();
 
-            if(player.onGround && player.world.getBlockState(blockUPos).equals(Blocks.GRASS.getDefaultState())){
-                player.world.setBlockState(blockUPos, Blocks.STONE.getDefaultState());
+            long minecraftTime = player.world.getWorldTime();
+            long minecraftNTime = 12570;
+            long minecraftDTime = 24000;
+
+            if(player.onGround && player.world.getBlockState(blockUPos).equals(Blocks.GRASS.getDefaultState()) && minecraftTime > minecraftNTime && minecraftTime < minecraftDTime){
+                player.world.setBlockState(blockUPos, ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUUPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUUPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUUPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockNPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockNPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockNPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockNNPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockNNPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockNNPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockNNNPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockNNNPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockNNNPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockEEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockEEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockEEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockEEEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockEEEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockEEEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockSPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockSPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockSPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockSSPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockSSPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockSSPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockSSSPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockSSSPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockSSSPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockWWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockWWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockWWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockWWWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockWWWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockWWWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUNPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUNPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUNPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUNNPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUNNPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUNNPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUNNNPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUNNNPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUNNNPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUEEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUEEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUEEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUEEEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUEEEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUEEEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUSPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUSPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUSPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUSSPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUSSPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUSSPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUSSSPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUSSSPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUSSSPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUWWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUWWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUWWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUWWWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUWWWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUWWWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUNPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUNPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUNPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUNNPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUNNPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUNNPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUNNNPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUNNNPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUNNNPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUEEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUEEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUEEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUEEEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUEEEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUEEEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUSPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUSPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUSPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUSSPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUSSPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUSSPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUSSSPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUSSSPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUSSSPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUWWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUWWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUWWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUWWWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUWWWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUWWWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockNEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockNEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockNEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockSEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockSEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockSEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockSWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockSWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockSWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockNWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockNWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockNWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUNEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUNEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUNEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUSEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUSEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUSEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUSWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUSWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUSWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUNWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUNWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUNWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUNEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUNEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUNEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUSEPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUSEPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUSEPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUSWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUSWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUSWPos, Blocks.GRASS.getDefaultState());
             }
-            if(player.world.getBlockState(blockUUNWPos).equals(Blocks.STONE.getDefaultState())){
+            if(player.world.getBlockState(blockUUNWPos).equals(ModBlocks.GRASS_LIGHT_BLOCK.getDefaultState())){
                 player.world.setBlockState(blockUUNWPos, Blocks.GRASS.getDefaultState());
             }
         }

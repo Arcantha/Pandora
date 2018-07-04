@@ -7,6 +7,4 @@ public class EntityDirehorse extends EntityHorse {
     public EntityDirehorse(World worldIn) {
         super(worldIn);
     }
-
-
 }

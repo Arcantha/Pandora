@@ -285,7 +285,8 @@ public class ModelRealPlayer extends AdvancedModelBase {
             }
         }
         if (entity.isRiding()){
-            Body.defaultPositionY = -23.0f;        }
+            Body.defaultPositionY = -23.0f;
+        }
     }
     public void setVisible(boolean visible)
     {
